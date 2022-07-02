@@ -21,23 +21,29 @@ public class PenktaUzduotis {
         if (liginiuIrNelyginiuSkaiciuDauguma(skaiciai) == 0) {
             if (neLyginiaiSkaiciaiSuma(skaiciai) > lyginiaiSkaiciaiSuma(skaiciai)) {
                 System.out.println("lyginiu ir nelyginiu skaiciu yra vienodai bet nelyginiu skaiciu suma yra didesne nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginius skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
-            } else {
+            } if (neLyginiaiSkaiciaiSuma(skaiciai) < lyginiaiSkaiciaiSuma(skaiciai)){
                 System.out.println("lyginiu ir nelyginiu skaiciu yra vienodai bet lyginiu skaiciu suma yra didesne  nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
+            }else if (neLyginiaiSkaiciaiSuma(skaiciai) == lyginiaiSkaiciaiSuma(skaiciai)) {
+                System.out.println("lyginiu ir nelyginiu skaiciu yra vienodai bet skaiciu suma yra vienoda,  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
             }
         }
 
         if (liginiuIrNelyginiuSkaiciuDauguma(skaiciai) == 1) {
             if (neLyginiaiSkaiciaiSuma(skaiciai) > lyginiaiSkaiciaiSuma(skaiciai)) {
                 System.out.println("lyginius skaiciu yra daugiau bet nelyginiu suma yra didesne  nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
-            } else {
+            } if (neLyginiaiSkaiciaiSuma(skaiciai) < lyginiaiSkaiciaiSuma(skaiciai)){
                 System.out.println("lyginius skaiciu yra daugiau ir lyginiu skaiciu suma yra didesne  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
+            } else if (neLyginiaiSkaiciaiSuma(skaiciai) == lyginiaiSkaiciaiSuma(skaiciai)) {
+                System.out.println("lyginius skaiciu yra daugiau bet skaiciu suma yra vienoda,  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
             }
         }
         if (liginiuIrNelyginiuSkaiciuDauguma(skaiciai) == -1) {
             if (neLyginiaiSkaiciaiSuma(skaiciai) > lyginiaiSkaiciaiSuma(skaiciai)) {
-                System.out.println("nelyginius skaiciu yra daugiau ir nelyginiu suma yra didesne  nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
-            } else {
-                System.out.println("nelyginius skaiciu yra daugiau bet lyginiu skaiciu suma yra didesne  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
+                System.out.println("nelyginius skaiciu yra daugiau ir nelyginiu suma yra didesne,  nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
+            } if (neLyginiaiSkaiciaiSuma(skaiciai) < lyginiaiSkaiciaiSuma(skaiciai)){
+                System.out.println("nelyginius skaiciu yra daugiau bet lyginiu skaiciu suma yra didesne,  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
+            } else if (neLyginiaiSkaiciaiSuma(skaiciai) == lyginiaiSkaiciaiSuma(skaiciai)) {
+                System.out.println("nelyginius skaiciu yra daugiau ir skaiciu suma yra vienoda,  nelyginiu skaiciu suma - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma - " + lyginiaiSkaiciaiSuma(skaiciai));
             }
         }
     }
