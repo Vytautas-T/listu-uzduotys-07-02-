@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class PenktaUzduotis {
     public static void main(String[] args) {
         ArrayList<Integer> skaiciai = nuskaitytiSarasa();
-        /** skaiciai.add(1);
+         /**skaiciai.add(1);
          skaiciai.add(2);
          skaiciai.add(3);
          skaiciai.add(4);
