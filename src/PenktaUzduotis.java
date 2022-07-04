@@ -18,8 +18,12 @@ public class PenktaUzduotis {
     }
 
     public static void atsakymas(ArrayList<Integer> skaiciai) {
-        if (liginiuIrNelyginiuSkaiciuDauguma(skaiciai) == 0) {
-            if (neLyginiaiSkaiciaiSuma(skaiciai) > lyginiaiSkaiciaiSuma(skaiciai)) {
+        int nelyginiuSuma = neLyginiaiSkaiciaiSuma(skaiciai);
+        int kuriuDaugiau = liginiuIrNelyginiuSkaiciuDauguma(skaiciai);
+        int lyginiuSuma = lyginiaiSkaiciaiSuma(skaiciai);
+        
+        if (kuriuDaugiau == 0) {
+            if (nelyginiuSuma > lyginiuSuma)) {
                 System.out.println("lyginiu ir nelyginiu skaiciu yra vienodai bet nelyginiu skaiciu suma yra didesne nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginius skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
             } if (neLyginiaiSkaiciaiSuma(skaiciai) < lyginiaiSkaiciaiSuma(skaiciai)){
                 System.out.println("lyginiu ir nelyginiu skaiciu yra vienodai bet lyginiu skaiciu suma yra didesne  nelyginiu skaiciu suma yra - " + neLyginiaiSkaiciaiSuma(skaiciai) + "  lyginiu skaiciu suma yra - " + lyginiaiSkaiciaiSuma(skaiciai));
