@@ -6,28 +6,30 @@ public class KetvirtaUzduotis {
         Scanner skaitytuvas = new Scanner(System.in);
         System.out.println("Iveskite kiek zodziu bus ilgesniu uz duota skaiciu x ");
         int x = skaitytuvas.nextInt();
-        ArrayList<String> zodziai = new ArrayList<>();
-        zodziai.add("masina");
+        ArrayList<String> zodziai = nuskaitytiSarasa();
+        /**zodziai.add("masina");
         zodziai.add("garazas");
         zodziai.add("namas");
         zodziai.add("kelias");
         zodziai.add("sunkvezimis");
-        zodziai.add("123456789");
+        zodziai.add("123456789");**/
         System.out.println(zodziuIlgioSkaicius(zodziuIlgis(zodziai),x));
 
     }
-   /** public static ArrayList<String> nuskaitytiSarasa() {
+    public static ArrayList<String> nuskaitytiSarasa() {
         Scanner skaitytuvas = new Scanner(System.in);
         ArrayList<String> zodis = new ArrayList<>();
-        System.out.println("Iveskite kiek bus sarase zodi");
+        System.out.println("Iveskite kiek bus sarase zodziu");
         int n = skaitytuvas.nextInt();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("iveskite " + i + " saraso zodis");
+            skaitytuvas.nextLine();
+            System.out.println("iveskite " + i + " saraso zodziu");
             zodis.add(skaitytuvas.toString());
         }
+        skaitytuvas.nextLine();
         return zodis;
-    }**/
+    }
     public static ArrayList<Integer> zodziuIlgis (ArrayList<String> zodziai) {
         ArrayList<Integer> zodziuIlggiai = new ArrayList<>();
         int zodzioIlgis = 0;
@@ -35,6 +37,7 @@ public class KetvirtaUzduotis {
             zodzioIlgis = zodis.length();
             zodziuIlggiai.add(zodzioIlgis);
         }
+        System.out.println(zodzioIlgis);
         return zodziuIlggiai;
     }
 
