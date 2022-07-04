@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class TreciaUzduotis {
     public static void main(String[] args) {
         ArrayList<Integer> listas = nuskaitytiSarasa();
-        palygintiSuPirmuSkaiciu(listas);
+        palygintiSuPirmuSTeigemukaiciu(listas);
+        neigemuSkaiciuSuma(listas);
     }
     public static ArrayList<Integer> nuskaitytiSarasa(){
         Scanner skaitytuvas = new Scanner(System.in);
@@ -18,21 +19,26 @@ public class TreciaUzduotis {
         }
         return skaicius;
     }
-    public static void palygintiSuPirmuSkaiciu(ArrayList<Integer> n){
+    public static void palygintiSuPirmuSTeigemukaiciu(ArrayList<Integer> n){
         int teigemuSkaiciusSuma = 0;
-        int neigemiSaiciuSuma = 0;
         for (Integer eDouble : n){
             if (0 < eDouble){
                 teigemuSkaiciusSuma++;
-            }
-            if (0 > eDouble) {
-                neigemiSaiciuSuma++;
             }
         }
         if (teigemuSkaiciusSuma == 0){
             System.out.println("didesniu skaiciu nera");
         }
-        System.out.println("neigemu skaiciu suma yra " + neigemiSaiciuSuma);
         System.out.println("teigemu skaiciu suma yra " + teigemuSkaiciusSuma);;
+    }
+    public static void neigemuSkaiciuSuma(ArrayList<Integer>n){
+        int neigemuSaiciuSuma = 0;
+        for (Integer eDouble : n){
+            if (0 > eDouble) {
+                neigemuSaiciuSuma++;
+
+            }
+        }
+        System.out.println("neigemu skaiciu suma yra " + neigemuSaiciuSuma);
     }
 }
