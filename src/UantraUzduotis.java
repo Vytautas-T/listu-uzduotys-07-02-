@@ -3,8 +3,11 @@ import java.util.Scanner;
 
 public class UantraUzduotis {
     public static void main(String[] args) {
+        Scanner skaitytuvas = new Scanner(System.in);
         ArrayList<Double> listas = nuskaitytiSarasa();
-        System.out.println(palygintiSuPirmuSkaiciu(listas));
+        System.out.println("irasykite kelintaji skaiciu lygysime su kitais");
+        int x = skaitytuvas.nextInt();
+        System.out.println(palygintiSuPirmuSkaiciu(listas,x));
     }
     public static ArrayList<Double> nuskaitytiSarasa(){
         Scanner skaitytuvas = new Scanner(System.in);
@@ -18,10 +21,10 @@ public class UantraUzduotis {
         }
         return skaicius;
     }
-    public static double palygintiSuPirmuSkaiciu(ArrayList<Double> n){
+    public static double palygintiSuPirmuSkaiciu(ArrayList<Double> n, int x){
         int didesnisSkaicius = 0;
         for (Double eDouble : n){
-            if (n.get(1) < eDouble){
+            if (n.get(x) < eDouble){
                 didesnisSkaicius++;
             }
         }
